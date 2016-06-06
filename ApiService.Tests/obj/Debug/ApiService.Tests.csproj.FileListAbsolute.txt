@@ -1,0 +1,17 @@
+C:\Users\Nkululeko\Documents\Visual Studio 2013\Projects\PhotoSharingCloud\ApiService.Tests\bin\Debug\ApiService.Tests.dll
+C:\Users\Nkululeko\Documents\Visual Studio 2013\Projects\PhotoSharingCloud\ApiService.Tests\bin\Debug\ApiService.Tests.pdb
+C:\Users\Nkululeko\Documents\Visual Studio 2013\Projects\PhotoSharingCloud\ApiService.Tests\bin\Debug\ApiService.dll
+C:\Users\Nkululeko\Documents\Visual Studio 2013\Projects\PhotoSharingCloud\ApiService.Tests\bin\Debug\Swashbuckle.Core.dll
+C:\Users\Nkululeko\Documents\Visual Studio 2013\Projects\PhotoSharingCloud\ApiService.Tests\bin\Debug\System.Web.Http.dll
+C:\Users\Nkululeko\Documents\Visual Studio 2013\Projects\PhotoSharingCloud\ApiService.Tests\bin\Debug\WebActivatorEx.dll
+C:\Users\Nkululeko\Documents\Visual Studio 2013\Projects\PhotoSharingCloud\ApiService.Tests\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\Nkululeko\Documents\Visual Studio 2013\Projects\PhotoSharingCloud\ApiService.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Nkululeko\Documents\Visual Studio 2013\Projects\PhotoSharingCloud\ApiService.Tests\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Nkululeko\Documents\Visual Studio 2013\Projects\PhotoSharingCloud\ApiService.Tests\bin\Debug\ApiService.pdb
+C:\Users\Nkululeko\Documents\Visual Studio 2013\Projects\PhotoSharingCloud\ApiService.Tests\bin\Debug\System.Web.Http.xml
+C:\Users\Nkululeko\Documents\Visual Studio 2013\Projects\PhotoSharingCloud\ApiService.Tests\bin\Debug\System.Web.Http.WebHost.xml
+C:\Users\Nkululeko\Documents\Visual Studio 2013\Projects\PhotoSharingCloud\ApiService.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Nkululeko\Documents\Visual Studio 2013\Projects\PhotoSharingCloud\ApiService.Tests\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Nkululeko\Documents\Visual Studio 2013\Projects\PhotoSharingCloud\ApiService.Tests\obj\Debug\ApiService.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Nkululeko\Documents\Visual Studio 2013\Projects\PhotoSharingCloud\ApiService.Tests\obj\Debug\ApiService.Tests.dll
+C:\Users\Nkululeko\Documents\Visual Studio 2013\Projects\PhotoSharingCloud\ApiService.Tests\obj\Debug\ApiService.Tests.pdb

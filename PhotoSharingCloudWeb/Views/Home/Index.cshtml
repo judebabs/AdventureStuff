@@ -1,0 +1,60 @@
+﻿@using System.Web.Http.Routing
+@{
+    ViewBag.Title = "Home Page";
+}
+<link href="~/Content/footable.standalone.css" rel="stylesheet" />
+<div>
+    <div class="col-md-8">
+
+        <table id="employeeTable" class="footable">
+            <thead>
+            <tr>
+                <th>
+                    Login Name
+                </th>
+                <th>
+                    Date Of Birth
+                </th>
+                <th>
+                    Select Profile
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr></tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+@section scripts{
+    <script>
+        $(function () {
+
+            var employeesGetUrl = "@Url.HttpRouteUrl("DefaultApi", new {controller = "Employee"})";
+
+            $.ajax({
+                url: employeesGetUrl,
+                type: "GET",
+                success: function (data) {
+                    $.each(data, function (index, element) {
+                        $('#employeeTable > tbody:last-child').append('<tr data-empNo="' + element.BusinessEntityID + '"><td>' + element.LoginID + '</td><td>' + element.BirthDate + '</td><td><input type="button" class="imageUpload" value="Upload Image"/></td></tr>');
+                    });
+                }
+            });
+
+            $(document).on('click', '.imageUpload', function () {
+                var empNo = $(this).parents('tr').attr('data-empNo');
+                $('#empId').val(empNo);
+                //alert('sds');
+
+            });
+
+        })
+
+    </script>
+    <script src="~/Scripts/footable.js"></script>
+
+}
+

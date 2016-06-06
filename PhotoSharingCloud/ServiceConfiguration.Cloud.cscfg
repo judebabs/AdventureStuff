@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="PhotoSharingCloud" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2015-04.2.6">
+  <Role name="PhotoSharingCloudWeb">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="MarvinP" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEDB8FLyy8/SrR3/HHEv3FZwwDQYJKoZIhvcNAQEBBQAEggEAbTYMxCuGq8i27A4CEJNLSx9y97rMcqnqrV2pDaLaVLsrqBZ0TeHwJzUR5bQxfk9AIZR0NKxJlZGiDphdhQXoXSypkVycvc/SBmL67A7me8gMVeX1U6pC885YPEYeq3yKcgBmKkQCEYg0jU7y0pg+u9O7mLiJpzQ+Sa5YkHs2et1P61fbHaE/+vIhKkLtAsrx7E15NLsvzMnmmcUK169BIwZt56hqI8q95WwmSe5l5Q7kr502s71rN8HgDT5RN5nc3rO92MnEKPTWAUzOoQu7ZosVU3w0tdZM/yk0mBTy4T+ObrNlsGe2N65gLiwIwblgaVV1hSg1j0lcB/WSpJHn7zAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECItVmn8RwEFcgBAt0ux4n7Xy6DC3KxlmSDH8" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2017-01-09T23:59:59.0000000+02:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="AFC1BE262A928104312FA33B2A1DCD81045F2354" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

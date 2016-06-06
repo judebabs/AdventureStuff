@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="row">
+    <div class="col-md-4">
+
+    </div>
+</div>
+
+@section scripts {
+<script type="text/javascript">
+    $(document).ready(function () {
+        websocket = new WebSocket('ws://localhost/api/service1');
+
+        websocket.onopen = function (event) {
+            console.log('we working now bitches...');
+        };
+
+        websocket.onmessage = function (event) {
+            $('#textArea').append(event.data);
+        };
+
+        websocket.send('Hello world');
+
+        //logot button call the close command...
+        websocket.close();
+
+    });
+</script>
+}

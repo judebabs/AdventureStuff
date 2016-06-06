@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceDefinition xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PhotoSharingCloud" schemaVersion="2015-04.2.6" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
+  <WebRole name="PhotoCloud" vmsize="Medium">
+    <LocalResources>
+      <LocalStorage name="DiagnosticStore" sizeInMB="4096" cleanOnRoleRecycle="false" />
+      <LocalStorage name="LocalStorage1" cleanOnRoleRecycle="false" />
+    </LocalResources>
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.ClientThumbprint" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.Connector.Enabled" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.Connector.Version" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.ServerThumbprint" />
+    </ConfigurationSettings>
+    <Endpoints>
+      <InputEndpoint name="Endpoint1" protocol="http" port="80" localPort="80" />
+      <InputEndpoint name="Microsoft.WindowsAzure.Plugins.WebDeploy.InputEndpoint" protocol="tcp" port="8172" localPort="8172" />
+      <InternalEndpoint name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Rdp" protocol="tcp">
+        <FixedPortRange min="3389" max="3389" />
+      </InternalEndpoint>
+      <InstanceInputEndpoint name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.Connector" localPort="30398" protocol="tcp">
+        <AllocatePublicPortFrom>
+          <FixedPortRange min="30400" max="30424" />
+        </AllocatePublicPortFrom>
+      </InstanceInputEndpoint>
+      <InstanceInputEndpoint name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.FileUpload" localPort="32398" protocol="tcp">
+        <AllocatePublicPortFrom>
+          <FixedPortRange min="32400" max="32424" />
+        </AllocatePublicPortFrom>
+      </InstanceInputEndpoint>
+      <InstanceInputEndpoint name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.Forwarder" localPort="31398" protocol="tcp">
+        <AllocatePublicPortFrom>
+          <FixedPortRange min="31400" max="31424" />
+        </AllocatePublicPortFrom>
+      </InstanceInputEndpoint>
+    </Endpoints>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" storeLocation="LocalMachine" storeName="My" />
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.TransportValidation" storeLocation="LocalMachine" storeName="My" />
+    </Certificates>
+  </WebRole>
+  <WorkerRole name="CacheWorkerRole1">
+    <LocalResources>
+      <LocalStorage name="DiagnosticStore" sizeInMB="20000" cleanOnRoleRecycle="false" />
+    </LocalResources>
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.CacheSizePercentage" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.ConfigStoreConnectionString" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.DiagnosticLevel" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Caching.NamedCaches" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.ClientThumbprint" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.Connector.Enabled" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.Connector.Version" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.ServerThumbprint" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" />
+    </ConfigurationSettings>
+    <Endpoints>
+      <InputEndpoint name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.RdpInput" protocol="tcp" port="3389" localPort="*" ignoreRoleInstanceStatus="true" />
+      <InternalEndpoint name="Microsoft.WindowsAzure.Plugins.Caching.cacheArbitrationPort" protocol="tcp" />
+      <InternalEndpoint name="Microsoft.WindowsAzure.Plugins.Caching.cacheClusterPort" protocol="tcp" />
+      <InternalEndpoint name="Microsoft.WindowsAzure.Plugins.Caching.cacheReplicationPort" protocol="tcp" />
+      <InternalEndpoint name="Microsoft.WindowsAzure.Plugins.Caching.cacheServicePortInternal" protocol="tcp" />
+      <InternalEndpoint name="Microsoft.WindowsAzure.Plugins.Caching.cacheSocketPort" protocol="tcp" />
+      <InternalEndpoint name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Rdp" protocol="tcp">
+        <FixedPortRange min="3389" max="3389" />
+      </InternalEndpoint>
+      <InstanceInputEndpoint name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.Connector" localPort="30398" protocol="tcp">
+        <AllocatePublicPortFrom>
+          <FixedPortRange min="30425" max="30449" />
+        </AllocatePublicPortFrom>
+      </InstanceInputEndpoint>
+      <InstanceInputEndpoint name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.FileUpload" localPort="32398" protocol="tcp">
+        <AllocatePublicPortFrom>
+          <FixedPortRange min="32425" max="32449" />
+        </AllocatePublicPortFrom>
+      </InstanceInputEndpoint>
+      <InstanceInputEndpoint name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.Forwarder" localPort="31398" protocol="tcp">
+        <AllocatePublicPortFrom>
+          <FixedPortRange min="31425" max="31449" />
+        </AllocatePublicPortFrom>
+      </InstanceInputEndpoint>
+    </Endpoints>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" storeLocation="LocalMachine" storeName="My" />
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteDebugger.TransportValidation" storeLocation="LocalMachine" storeName="My" />
+    </Certificates>
+  </WorkerRole>
+</ServiceDefinition>
